@@ -1,5 +1,3 @@
-# test3
-# Lab 4 -> Step 1 -> Test 3
 from unit_testing import check_equal
 from T082_M1_load_data import load_data
 
@@ -25,8 +23,8 @@ def test_thing() -> None:
     tests_failed = 0
     tests_completed = 0
 
-    passed = check_equal(set(T082_M1_load_data("student-mat.csv",
-                                               "failures").get("GP")[0].keys()),
+    passed = check_equal("School Student Keys", set(T082_M1_load_data("student-mat.csv",
+                                                                      "failures").get("GP")[0].keys()),
                          {"School", "Age", "StudyTime", "Health",
                           'Absences', 'G1', 'G2', 'G3'})
 
@@ -36,8 +34,8 @@ def test_thing() -> None:
         tests_failed += 1
     tests_completed += 1
 
-    passed = check_equal(set(T082_M1_load_data("student-mat.csv",
-                                               "health").get("GP")[0].keys()),
+    passed = check_equal("School Student Keys", set(T082_M1_load_data("student-mat.csv",
+                                                                      "health").get("GP")[0].keys()),
                          {"School", "Age", "StudyTime", 'Failures',
                           'Absences', 'G1', 'G2', 'G3'})
 
@@ -47,8 +45,8 @@ def test_thing() -> None:
         tests_failed += 1
     tests_completed += 1
 
-    passed = check_equal(set(T082_M1_load_data("student-mat.csv",
-                                               "school").get("GP")[0].keys()),
+    passed = check_equal("School Student Keys", set(T082_M1_load_data("student-mat.csv",
+                                                                      "school").get("GP")[0].keys()),
                          {"Age", "StudyTime", 'Failures', 'Health',
                           'Absences', 'G1', 'G2', 'G3'})
 
@@ -68,4 +66,3 @@ def test_thing() -> None:
     tests_completed += 1
 
     print(tests_completed)
-    
