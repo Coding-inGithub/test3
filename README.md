@@ -1,4 +1,8 @@
 from unit_testing import check_equal
+from T082_M1_load_data import student_health_dictionary
+from T082_M1_load_data import student_age_dictionary
+from T082_M1_load_data import student_school_dictionary
+from T082_M1_load_data import student_failures_dictionary
 from T082_M1_load_data import load_data
 
 
@@ -65,4 +69,4 @@ def test_thing() -> None:
         tests_failed += 1
     tests_completed += 1
 
-    print(tests_completed)
+    
